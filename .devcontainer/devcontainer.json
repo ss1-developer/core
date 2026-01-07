@@ -19,7 +19,8 @@
     "-e",
     "GIT_EDITOR=code --wait",
     "--security-opt",
-    "label=disable"
+    "label=disable",
+    "--net=host"
   ],
   "customizations": {
     "vscode": {
@@ -73,5 +74,12 @@
         ]
       }
     }
-  }
+  },
+  "mounts": [
+    "source=D:\\projects\\hivi_power_sequencer_p10r\\component,target=/workspaces/ss1_core/homeassistant/components/hivi_power_sequencer_p10r,type=bind,consistency=cached",
+    "source=D:\\projects\\hivi_power_sequencer_p10r\\test,target=/workspaces/ss1_core/tests/components/hivi_power_sequencer_p10r,type=bind,consistency=cached",
+    "source=D:\\projects\\hivi_speaker\\component,target=/workspaces/ss1_core/homeassistant/components/hivi_speaker,type=bind,consistency=cached",
+    "source=D:\\projects\\hivi_speaker\\test,target=/workspaces/ss1_core/tests/components/hivi_speaker,type=bind,consistency=cached",
+    "source=D:\\projects\\ss-hivi-audio,target=/workspaces/ss1_core/config/custom_components/ss-hivi-audio,type=bind,consistency=cached"
+  ]
 }
